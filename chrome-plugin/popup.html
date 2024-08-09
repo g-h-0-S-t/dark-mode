@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Fira Code", monospace;
+                padding: 20px;
+                background-color: #1e1e1e;
+                color: #e0e0e0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100px;
+                width: 100px;
+            }
+
+            .toggle-button {
+                position: relative;
+                width: 60px;
+                height: 34px;
+                background-color: #ccc;
+                border-radius: 34px;
+                cursor: pointer;
+                transition: background-color 0.4s;
+            }
+
+            .toggle-button:before {
+                content: "";
+                position: absolute;
+                width: 26px;
+                height: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                border-radius: 50%;
+                transition: transform 0.4s;
+            }
+
+            .toggle-button.active {
+                background-color: #4caf50;
+            }
+
+            .toggle-button.active:before {
+                transform: translateX(26px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="toggle-button" id="darkModeToggle"></div>
+
+        <script src="popup.js"></script>
+    </body>
+</html>
