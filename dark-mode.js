@@ -1,8 +1,14 @@
 (() => {
+    const link = document.createElement('link');
+    link.href = 'https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+
     const darkModeStyle = document.createElement('style');
     darkModeStyle.id = 'dark-mode-style';
     darkModeStyle.innerHTML = `
         * {
+            font-family: 'Fira Code', monospace !important;
             background-color: #121212 !important;
             color: #e0e0e0 !important;
         }
